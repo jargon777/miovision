@@ -1,0 +1,27 @@
+type,actuationMode,lane,label,setBack,movement,channel,trafficType
+STOPBAR,PRESENCE,1,SBLFT LL,0,"{'type': 'LT', 'movementLaneCount': 2, 'street': 'Hespeler Rd.', 'label': 'SB LT', 'approach': 'SB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",4,VEHICLE
+ADVANCE,COUNT,1,NBTLL,-212,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'NB THRU', 'approach': 'NB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",31,VEHICLE
+STOPBAR,PRESENCE,2,SBLT RL,0,"{'type': 'LT', 'movementLaneCount': 2, 'street': 'Hespeler Rd.', 'label': 'SB LT', 'approach': 'SB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",3,VEHICLE
+STOPBAR,PRESENCE,2,EB LT RL,0,"{'type': 'LT', 'movementLaneCount': 2, 'street': 'Eagle St. N.', 'label': 'EB LT', 'approach': 'EB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",15,VEHICLE
+ADVANCE,COUNT,1,WBTH LL (Back),115,"{'type': 'THRU', 'movementLaneCount': 2, 'street': 'Pinebush Rd.', 'label': 'WB THRU', 'approach': 'WB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",32,VEHICLE
+STOPBAR,PRESENCE,,NB Q Jump (virtual detector),0,,49,VEHICLE
+STOPBAR,PRESENCE,5,WB RT,0,"{'type': 'RT', 'movementLaneCount': 1, 'street': 'Pinebush Rd.', 'label': 'WB RT', 'approach': 'WB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",5,VEHICLE
+ADVANCE,COUNT,3,NBTRL,-212,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'NB THRU', 'approach': 'NB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",29,VEHICLE
+STOPBAR,PRESENCE,2,NBLT RL,0,"{'type': 'LT', 'movementLaneCount': 1, 'street': 'Hespeler Rd.', 'label': 'NB LT', 'approach': 'NB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",11,VEHICLE
+STOPBAR,PRESENCE,3,EB TH LL,0,"{'type': 'THRU', 'movementLaneCount': 2, 'street': 'Eagle St. N.', 'label': 'EB THRU', 'approach': 'EB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",14,VEHICLE
+ADVANCE,COUNT,2,NBTCL,-212,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'NB THRU', 'approach': 'NB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",30,VEHICLE
+STOPBAR,PRESENCE,1,EB LT LL,0,"{'type': 'LT', 'movementLaneCount': 2, 'street': 'Eagle St. N.', 'label': 'EB LT', 'approach': 'EB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",16,VEHICLE
+ADVANCE,COUNT,1,SBTLL,227,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'SB THRU', 'approach': 'SB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",27,VEHICLE
+ADVANCE,COUNT,2,SBTCL,227,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'SB THRU', 'approach': 'SB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",26,VEHICLE
+STOPBAR,PRESENCE,3,SBTH CL&LL,0,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'SB THRU', 'approach': 'SB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",2,VEHICLE
+STOPBAR,PRESENCE,4,EB TH/RT RL,0,"{'type': 'THRU', 'movementLaneCount': 2, 'street': 'Eagle St. N.', 'label': 'EB THRU', 'approach': 'EB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",13,VEHICLE
+STOPBAR,PRESENCE,0,WB Bike,0,"{'type': 'THRU', 'movementLaneCount': 2, 'street': 'Pinebush Rd.', 'label': 'WB THRU', 'approach': 'WB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",6,VEHICLE
+STOPBAR,PRESENCE,5,SBTH RL,0,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'SB THRU', 'approach': 'SB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",1,VEHICLE
+STOPBAR,PRESENCE,3,NBTH RL&CL&LL,0,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'NB THRU', 'approach': 'NB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",10,VEHICLE
+STOPBAR,PRESENCE,1,WBLT RL&LL,0,"{'type': 'LT', 'movementLaneCount': 2, 'street': 'Pinebush Rd.', 'label': 'WB LT', 'approach': 'WB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",8,VEHICLE
+STOPBAR,PRESENCE,1,NB LT LL,0,"{'type': 'LT', 'movementLaneCount': 1, 'street': 'Hespeler Rd.', 'label': 'NB LT', 'approach': 'NB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",12,VEHICLE
+STOPBAR,PRESENCE,,NB Q Jump,0,,17,TRANSIT
+ADVANCE,COUNT,3,SBTRL,227,"{'type': 'THRU', 'movementLaneCount': 3, 'street': 'Hespeler Rd.', 'label': 'SB THRU', 'approach': 'SB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",25,VEHICLE
+ADVANCE,COUNT,2,WBTH RL  (Back),115,"{'type': 'THRU', 'movementLaneCount': 2, 'street': 'Pinebush Rd.', 'label': 'WB THRU', 'approach': 'WB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",28,VEHICLE
+STOPBAR,PRESENCE,6,NBRT/BUS,0,"{'type': 'RT', 'movementLaneCount': 1, 'street': 'Hespeler Rd.', 'label': 'NB RT', 'approach': 'NB', 'approachPriority': 'MAJOR', 'approachNominalSpeed': 70}",9,VEHICLE
+STOPBAR,PRESENCE,3,WB RL & LL,0,"{'type': 'THRU', 'movementLaneCount': 2, 'street': 'Pinebush Rd.', 'label': 'WB THRU', 'approach': 'WB', 'approachPriority': 'MINOR', 'approachNominalSpeed': 50}",7,VEHICLE

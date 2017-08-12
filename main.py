@@ -163,6 +163,7 @@ def printExportIntersectionConfig(idToken, car):
     #dump the data to screen if requested.
     print("Type '1' to see a JSON dump of the data, otherwise press return to the Option Bridge")
     option = input("?")  
+    option = '1' if option == '' else option
     if option != '1':
         print("------------ JSON DUMP OF INTERSECTION DATA -------------")
         print(json.dumps(intersections, indent=1, sort_keys=True))
@@ -178,13 +179,14 @@ def bridgeIntersectionHistory(idToken, car, mode):
     end = start #timestamp of the end period, in this hacky method assigned to be identical to start, it seems miovision returns you the closes timestamp regardless of its validity.
     interval = 1000 #size of the step to take when searching for data, the resotion of the data seems to be about 1000 ms (1 second) for signal statuses, and about 20000 for detector statuses. 
     intervals = 1 #number of rows to return.
+    max_break_cond = 5
     exportF = WRITEDIR + mode + "-" + str(car) + ".csv"
     try:
         print("Current Unix Time is: " + str(int(time.time()) * 100))
         print("Choose a time stamp and interval size and count to obtain data")
         print("Some time combinations may not work, latest available data seems to be from before 1490894595394")
         print("Choose the end period of the data")
-        print("Input as Unix Timestamp with Seconds (or press enter for default of 1490894595394")
+        print("Input as Unix Timestamp with Seconds (or press enter for default of 1490894595394)")
         start = input("? - ")
         start = 1490894595394 if start == "" else int(start) #assign a default value when you press enter with no entry. 
         end = start #set start to equal end.
@@ -196,6 +198,10 @@ def bridgeIntersectionHistory(idToken, car, mode):
         
         print("Choose the number of intervals to obtain the data for (large values may take awhile)")
         intervals = int(input("? - "))
+        
+        print("Choose the infinite loop protection value (max times the same value can be returned before ending), press enter for default of 50")
+        max_break_cond = int(input("? - "))
+        max_break_cond = 50 if max_break_cond == '' else int(max_break_cond) #this prevents the loop from going on forever, it seems that the resolution of the data varies a lot.
         
         dataprevtime = 0 #so we can check if the data is new for this interval
         i = 0 #the intervals we've completed are stored here
@@ -218,9 +224,9 @@ def bridgeIntersectionHistory(idToken, car, mode):
             if datatime == dataprevtime:
                 break_cond += 1 #if old data, increment the infinite loop protection.
                 print("Data in this interval is identical to previous, adding one more interval")
-                if break_cond > 5:
+                if break_cond > max_break_cond:
                     #the interval is probably too small, as the last few intervals got identical data.
-                    print("Interval too small? Identical data returned for five intervals")
+                    print("Interval too small? Identical data returned for " + str(max_break_cond) + " intervals")
                     break
             else:
                 break_cond = 0 #reset the infnite loop protector
