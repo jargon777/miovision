@@ -26,3 +26,10 @@ Before installing "warrant" you should install pycrypto, as it is a dependancy o
 
 ## Running the Application
 Navigate to the folder where you downloaded "main.py" and type "python main.py". This should run the program in your command window. If you get errors before seeing the main menu, it is likely that some dependancy is still missing.
+
+## Data Export Format
+Data is exported in CSV format. The code usually highlights how the data is exported if you read the comments, otherwise:
+* In the "signal statuses" and the "detector status" files, "channels" refer to how miovision/waterloo organises the data, not every channel is used, so the columns don't always have useful data. 
+* In these files, POSIX refers to the unix timestamp, and is the last column
+* In these files, signal-status shows red/yellow/green for the signal group (channel) attached to it. You will have to query Intersection Configuration to figure out the signal grouping or make guesses yourself.
+* In these files, detector status shows TRUE if a vehicle is detected and FALSE otherwise.
